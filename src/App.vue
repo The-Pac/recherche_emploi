@@ -2,28 +2,29 @@
   <div id="page">
     <div id="stats">
       <div class="stat">
-        <h3>Lead/Seniors :</h3>
+        <h3><label title="Poste destine au senior ou leader">(Info)</label> Lead/Seniors :</h3>
         <div>
           <progress max="100" :value="total > 0 && lead_seniors > 0 ? ((lead_seniors / total) * 100).toFixed(2) : 0"/>
           <label>{{ total > 0 && lead_seniors > 0 ? ((lead_seniors / total) * 100).toFixed(2) : 0 }}%</label>
         </div>
       </div>
       <div class="stat">
-        <h3>Pas d'expérience :</h3>
+        <h3><label title="Poste qui requiert beaucoup d'années d'experience">(Info)</label> Pas d'expérience :</h3>
         <div>
           <progress max="100" :value="total > 0 && no_experience > 0 ? ((no_experience / total) * 100).toFixed(2) : 0"/>
           <label>{{ total > 0 && no_experience > 0 ? ((no_experience / total) * 100).toFixed(2) : 0 }}%</label>
         </div>
       </div>
       <div class="stat">
-        <h3>Pas les compétences :</h3>
+        <h3><label title="Poste qui requiert des competences/un diplome que je n'ai pas">(Info)</label> Pas les
+          compétences :</h3>
         <div>
           <progress max="100" :value="total > 0 && no_skills > 0 ? ((no_skills / total) * 100).toFixed(2) : 0"/>
           <label>{{ total > 0 && no_skills > 0 ? ((no_skills / total) * 100).toFixed(2) : 0 }}%</label>
         </div>
       </div>
       <div class="stat">
-        <h3>Autres :</h3>
+        <h3><label title="Poste qui sort du domaine de developpement">(Info)</label> Autres :</h3>
         <div>
           <progress max="100" :value="total > 0 && others > 0 ? ((others / total) * 100).toFixed(2) : 0"/>
           <label>{{ total > 0 && others > 0 ? ((others / total) * 100).toFixed(2) : 0 }}%</label>
@@ -119,7 +120,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: Roboto,serif;
+  font-family: Roboto, serif;
 }
 
 #buttons {
@@ -155,13 +156,13 @@ button {
 
 }
 
-h3,label {
+h3, label {
   color: white;
   font-weight: bold;
   font-size: x-large;
 }
 
-progress{
+progress {
   margin: 0 10px;
 }
 </style>
